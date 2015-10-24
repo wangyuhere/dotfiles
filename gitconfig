@@ -1,0 +1,24 @@
+[alias]
+  aa = add --all
+  ap = add --patch
+  ci = commit -v
+  co = checkout
+  graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short --abbrev-commit
+[branch]
+  autosetuprebase = always
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[fetch]
+  prune = true
+[include]
+  path = ~/.gitconfig.local
+[merge]
+  ff = false
+[rebase]
+  autosquash = true
+[push]
+  default = current
+
