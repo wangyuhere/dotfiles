@@ -66,6 +66,7 @@ endfunction
 
 inoremap <S-Tab> <c-n>
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+map  _/ <Plug>(easymotion-sn)
 map , <Plug>(easymotion-prefix)
 map <C-n> :NERDTreeToggle<CR> " NERDtree
 map <Leader>1 1gt
@@ -73,6 +74,8 @@ map <Leader>2 2gt
 map <Leader>3 3gt
 map <Leader>4 4gt
 map <Leader>ct :!ctags -R .<CR>
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-k> :wincmd k<CR>
