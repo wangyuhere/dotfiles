@@ -3,6 +3,7 @@
   ap = add --patch
   ci = commit -v
   co = checkout
+  ctags = !.git/hooks/ctags
   graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short --abbrev-commit
 [branch]
   autosetuprebase = always
@@ -15,6 +16,8 @@
   prune = true
 [include]
   path = ~/.gitconfig.local
+[init]
+  templatedir = ~/.git_template
 [merge]
   ff = false
 [rebase]
