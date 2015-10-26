@@ -28,9 +28,12 @@ set wildmode=list:longest,list:full
 source ~/.vimrc.bundles
 
 let mapleader=" "
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_eruby_ruby_quiet_messages={"regex": "possibly useless use of a variable in void context"}
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_javascript_checkers = ["eslint"]
 
 colorscheme solarized
