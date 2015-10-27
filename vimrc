@@ -1,3 +1,4 @@
+set autoread
 set autowrite     " Automatically :write before running commands
 set background=light
 set backspace=2   " Backspace deletes like most programs in insert mode
@@ -23,14 +24,21 @@ set splitbelow
 set splitright
 set tabstop=2
 set textwidth=80
+set visualbell
 set wildmode=list:longest,list:full
 
 source ~/.vimrc.bundles
 
 let mapleader=" "
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+if exists('$TMUX')
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+else
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+end
 let g:syntastic_check_on_open=1
 let g:syntastic_eruby_ruby_quiet_messages={"regex": "possibly useless use of a variable in void context"}
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
@@ -43,12 +51,12 @@ filetype plugin indent on
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 
 " Reserve status after run a command
