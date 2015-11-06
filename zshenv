@@ -1,6 +1,7 @@
 export CLICOLOR=1
 export EDITOR=$VISUAL
-export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
+export GOPATH=$HOME/Projects/go
+export PATH="$HOME/.bin:$GOPATH/bin:/usr/local/sbin:$PATH"
 export PATH=".git/safe/../../bin:$PATH"
 export VISUAL=vim
 
