@@ -96,7 +96,7 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>r :w<CR>
 nnoremap <leader><leader> <c-^>  " switch last two files
 
 if filereadable($HOME . "/.vimrc.local")
