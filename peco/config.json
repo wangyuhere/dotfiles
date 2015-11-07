@@ -1,0 +1,12 @@
+{
+    "Style": {
+        "Basic": ["on_default", "default"],
+        "SavedSelection": ["blue"],
+        "Selected": ["on_white"],
+        "Query": ["yellow", "bold"],
+        "Matched": ["red"]
+    },
+    "Keymap": {
+        "C-_": "peco.ToggleSelectionAndSelectNext"
+    }
+}
