@@ -74,6 +74,9 @@ function! Preserve(command)
   call cursor(l, c)
 endfunction
 
+autocmd FileType go set noexpandtab
+autocmd FileType go set nolist
+
 inoremap <S-Tab> <c-n>
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 map  _/ <Plug>(easymotion-sn)
