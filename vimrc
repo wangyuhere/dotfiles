@@ -4,6 +4,7 @@ set background=dark
 set backspace=2   " Backspace deletes like most programs in insert mode
 set clipboard=unnamed " Use system clipboard for every yank
 set colorcolumn=+1
+set completeopt-=preview  " Disable auto complete preview window
 set expandtab
 set history=50
 set incsearch     " do incremental searching
@@ -91,18 +92,21 @@ map <Leader>4 4gt
 map <Leader>ct :!ctags -R .<CR>
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+nmap <F8> :TagbarToggle<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-l> :wincmd l<CR>
-nmap _= :call Preserve("normal gg=G")<CR>  " format the whole file
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>  " remove trailing spaces
+nmap _= :call Preserve("normal gg=G")<CR>  " format the whole file
+nnoremap <Down> :cnext<CR>
+nnoremap <Leader><Leader> <c-^>  " switch last two files
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>r :w<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>r :w<CR>
-nnoremap <leader><leader> <c-^>  " switch last two files
+nnoremap <Up> :cprevious<CR>
 
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
