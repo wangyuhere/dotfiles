@@ -3,6 +3,7 @@
   ap = add --patch
   ci = commit -v
   co = checkout
+  st = status
   ctags = !.git/hooks/ctags
   graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short --abbrev-commit
 [branch]
