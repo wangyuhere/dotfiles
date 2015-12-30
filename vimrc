@@ -42,6 +42,7 @@ else
 end
 let g:airline#extensions#tabline#enabled=1
 let g:ctrlp_user_command=[".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
+let g:jsx_ext_required = 0
 let g:neocomplete#enable_at_startup=1
 let g:syntastic_check_on_open=1
 let g:syntastic_eruby_ruby_quiet_messages={"regex": "possibly useless use of a variable in void context"}
