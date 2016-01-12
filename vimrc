@@ -111,6 +111,7 @@ nnoremap <Leader>r :w<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Up> :cprevious<CR>
+nnoremap g. g;
 xnoremap <  <gv
 xnoremap >  >gv
 
