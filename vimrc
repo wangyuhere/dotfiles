@@ -85,6 +85,7 @@ inoremap <S-Tab> <c-n>
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 map  _/ <Plug>(easymotion-sn)
 map , <Plug>(easymotion-prefix)
+map <C-a> GVgg
 map <C-n> :NERDTreeToggle<CR> " NERDtree
 map <Leader>1 1gt
 map <Leader>2 2gt
