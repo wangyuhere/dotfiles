@@ -111,6 +111,8 @@ nnoremap <Leader>r :w<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Up> :cprevious<CR>
+xnoremap <  <gv
+xnoremap >  >gv
 
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
