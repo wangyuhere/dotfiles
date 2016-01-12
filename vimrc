@@ -87,6 +87,8 @@ map  _/ <Plug>(easymotion-sn)
 map , <Plug>(easymotion-prefix)
 map <C-a> GVgg
 map <C-n> :NERDTreeToggle<CR> " NERDtree
+map <C-b> :copen<CR>
+map <C-y> :cclose<CR>
 map <Leader>1 1gt
 map <Leader>2 2gt
 map <Leader>3 3gt
