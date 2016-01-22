@@ -21,6 +21,7 @@ set ruler         " show the cursor position all the time
 set shiftround
 set shiftwidth=2
 set showcmd       " display incomplete commands
+set spell
 set splitbelow
 set splitright
 set tabstop=2
