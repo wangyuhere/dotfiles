@@ -9,7 +9,9 @@ set expandtab
 set history=50
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
+set lazyredraw
 set list listchars=tab:»·,trail:·,nbsp:·
+set mouse=a
 set nobackup
 set nocompatible
 set noswapfile
@@ -18,6 +20,7 @@ set number
 set numberwidth=5
 set relativenumber
 set ruler         " show the cursor position all the time
+set ttyfast
 set shiftround
 set shiftwidth=2
 set showcmd       " display incomplete commands
