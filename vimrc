@@ -1,6 +1,6 @@
 set autoread
 set autowrite     " Automatically :write before running commands
-set background=dark
+set background=light
 set backspace=2   " Backspace deletes like most programs in insert mode
 set clipboard=unnamed " Use system clipboard for every yank
 set colorcolumn=+1
