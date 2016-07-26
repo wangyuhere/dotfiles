@@ -1,6 +1,5 @@
 set autoread
 set autowrite     " Automatically :write before running commands
-set background=light
 set backspace=2   " Backspace deletes like most programs in insert mode
 set clipboard=unnamed " Use system clipboard for every yank
 set colorcolumn=+1
@@ -53,6 +52,9 @@ let g:syntastic_check_on_open=1
 let g:syntastic_eruby_ruby_quiet_messages={"regex": "possibly useless use of a variable in void context"}
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_javascript_checkers=["eslint"]
+
+let backgroundcolor=$COLOR_THEME
+execute "set background=".backgroundcolor
 
 colorscheme solarized
 runtime macros/matchit.vim

@@ -6,6 +6,7 @@ export LC_ALL=en_US.UTF-8
 export PATH="$HOME/.bin:$GOPATH/bin:/usr/local/sbin:$PATH"
 export PATH=".git/safe/../../bin:$PATH"
 export VISUAL=vim
+export COLOR_THEME=dark
 
 if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash)"
