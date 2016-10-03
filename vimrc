@@ -13,6 +13,7 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set mouse=a
 set nobackup
 set nocompatible
+set nofoldenable
 set noswapfile
 set nowritebackup
 set number
@@ -43,11 +44,15 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 end
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let g:airline#extensions#tabline#enabled=1
 let g:ctrlp_user_command=[".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
 let g:jsx_ext_required = 0
+let g:loaded_syntastic_crystal_crystal_checker = 0
 let g:neocomplete#enable_at_startup=1
-let g:rspec_command="!bundle exec rspec {spec}"
+let g:neocomplete#enable_auto_select=0
+let g:rspec_command="!echo {spec}; rspec {spec}"
+let g:rustfmt_autosave = 1
 let g:syntastic_check_on_open=1
 let g:syntastic_eruby_ruby_quiet_messages={"regex": "possibly useless use of a variable in void context"}
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
@@ -85,8 +90,12 @@ function! Preserve(command)
   call cursor(l, c)
 endfunction
 
-autocmd FileType go set noexpandtab
-autocmd FileType go set nolist
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType go set noexpandtab nolist
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 omnifunc=pythoncomplete#Complete
 
 inoremap <S-Tab> <c-n>
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
