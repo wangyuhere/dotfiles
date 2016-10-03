@@ -1,4 +1,4 @@
-set -x COLOR_THEME dark
+set -x COLOR_THEME light
 set -x EDITOR vim
 set -x GOPATH $HOME/Projects/go
 set -x LANG en_US.UTF-8
@@ -6,7 +6,7 @@ set -x LC_ALL en_US.UTF-8
 set fish_greeting
 set fish_key_bindings fish_vi_key_bindings
 
-set -x PATH $HOME/.cargo/bin $GOPATH/bin $HOME/.rbenv/bin $PATH
+set -x PATH $HOME/.cargo/bin $GOPATH/bin $HOME/.rbenv/bin /usr/local/sbin $PATH
 rbenv init - | source
 set -x PATH .git/safe/../../bin $HOME/.bin $PATH
 
@@ -22,6 +22,7 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias migrate="rake db:migrate; and db:rollback; and rake db:migrate"
 alias mkdir="mkdir -p"
 alias s="bundle exec rspec"
+alias newrelic="heroku addons:open newrelic -a mnd-production"
 
 function path --description "List all paths"
   for p in $PATH
